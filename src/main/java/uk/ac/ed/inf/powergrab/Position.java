@@ -9,13 +9,12 @@ public class Position {
     
     //Trig height and width results are constants so all the distances don't need to be recalculated each time nextPosition is called in order to make the program more efficient.
     //O.0003 is the hypotenuse length as it is the distance the drone moves in one move.
-    //The results are all made positive as they are triangle lengths.
-	double h2 = Math.abs(0.0003*Math.sin(67.5));//rsin67.5 height (67.5 degrees for going NNE,SSE,NNW,SSW)
-	double w2 = Math.abs(0.0003*Math.cos(67.5));//rcos67.5 width
-	double h3 = Math.abs(0.0003*Math.sin(45)); //rsin45 height (45 degrees for going NE,NW,SE,SW)
-	double w3 = Math.abs(0.0003*Math.cos(45)); //rcos45 width
-	double h4 = Math.abs(0.0003*Math.sin(22.5)); //rsin22.5 height (22.5 degrees for going ENE,ESE,WNW,WSW)
-	double w4 = Math.abs(0.0003*Math.cos(22.5)); //rcos22.5 width
+	double h2 = 0.0003*Math.sin(Math.toRadians(67.5));//rsin67.5 height (67.5 degrees for going NNE,SSE,NNW,SSW)
+	double w2 = 0.0003*Math.cos(Math.toRadians(67.5));//rcos67.5 width
+	double h3 = 0.0003*Math.sin(Math.toRadians(45)); //rsin45 height (45 degrees for going NE,NW,SE,SW)
+	double w3 = 0.0003*Math.cos(Math.toRadians(45)); //rcos45 width
+	double h4 = 0.0003*Math.sin(Math.toRadians(22.5)); //rsin22.5 height (22.5 degrees for going ENE,ESE,WNW,WSW)
+	double w4 = 0.0003*Math.cos(Math.toRadians(22.5)); //rcos22.5 width
     
 	
     public Position (double latitude, double longitude) {//Defining position type for longitude,latitude coordinates.
